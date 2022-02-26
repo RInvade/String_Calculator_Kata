@@ -18,6 +18,6 @@ final class VariablesTest extends TestCase
 
         $addedValues = $variables->addTwoValues(2, 2);
 
-        $this->assertEquals(5, $addedValues);
+        $this->assertEquals(4, $addedValues);
     }
 }
