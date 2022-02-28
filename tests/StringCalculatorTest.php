@@ -79,4 +79,16 @@ final class StringCalculatorTest extends TestCase
 
         $this->assertEquals("Number expected but EOF found.",$returnedString);
     }
+
+    /**
+     * @test
+     */
+    public function given_negative_numbers_returns_error(){
+
+        $stringObject = new StringCalculator();
+
+        $returnedString = $stringObject->add("2,-4,-5");
+
+        $this->assertEquals("Negative not allowed : -4, -5",$returnedString);
+    }
 }
