@@ -55,4 +55,16 @@ final class StringCalculatorTest extends TestCase
 
         $this->assertEquals("6",$returnedString);
     }
+
+    /**
+     * @test
+     */
+    public function given_multiple_separator_return_error(){
+
+        $stringObject =new StringCalculator();
+
+        $returnedString = $stringObject->add("175.2\n,35");
+
+        $this->assertEquals("Number expected but ',' found at position 6.",$returnedString);
+    }
 }
