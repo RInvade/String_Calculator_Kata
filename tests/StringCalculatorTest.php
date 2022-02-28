@@ -91,4 +91,30 @@ final class StringCalculatorTest extends TestCase
 
         $this->assertEquals("Negative not allowed : -4, -5",$returnedString);
     }
+
+
+    /**
+     * @test
+     */
+    public function given_custom_separator_operates_with_it(){
+
+        $stringObject = new StringCalculator();
+
+        $returnedString = $stringObject->add("//:\n1:2");
+
+        $this->assertEquals("3",$returnedString);
+    }
+    /**
+     * @test
+     */
+    public function given_long_custom_separator_operates_with_it(){
+
+        $stringObject = new StringCalculator();
+
+        $returnedString = $stringObject->add("//exp\n2exp3");
+
+        $this->assertEquals("5",$returnedString);
+    }
+
+
 }
