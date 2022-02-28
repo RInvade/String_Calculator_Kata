@@ -31,4 +31,16 @@ final class StringCalculatorTest extends TestCase
 
         $this->assertEquals("0",$returnedString);
     }
+
+    /**
+     * @test
+     */
+    public function given_1_2_with_comma_separator_returns_3(){
+
+        $stringObject = new StringCalculator();
+
+        $returnedString = $stringObject->add("1,3");
+
+        $this->assertEquals("4",$returnedString);
+    }
 }
