@@ -3,9 +3,9 @@ declare(strict_types=1);
 namespace koans;
 class StringCalculator
 {
-    public function add():string
+    public function add(string $inputedString):string
     {
-        return "";
+        return "0";
     }
 
 }

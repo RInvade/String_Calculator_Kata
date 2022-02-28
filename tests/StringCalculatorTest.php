@@ -14,9 +14,21 @@ final class StringCalculatorTest extends TestCase
 
         $stringObject = new StringCalculator();
 
-        $returnedString = $stringObject->add();
+        $returnedString = $stringObject->add("");
 
         $this->assertEquals("string", gettype($returnedString));
 
+    }
+
+    /**
+     * @test
+     */
+    public function given_empty_string_returns_0(){
+
+        $stringObject = new StringCalculator();
+
+        $returnedString = $stringObject->add("");
+
+        $this->assertEquals("0",$returnedString);
     }
 }
