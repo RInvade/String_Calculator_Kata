@@ -43,4 +43,16 @@ final class StringCalculatorTest extends TestCase
 
         $this->assertEquals("4",$returnedString);
     }
+
+    /**
+     * @test
+     */
+    public function handle_sum_with_newline_as_separator(){
+
+        $stringObject = new StringCalculator();
+
+        $returnedString = $stringObject->add("1\n2,3");
+
+        $this->assertEquals("6",$returnedString);
+    }
 }

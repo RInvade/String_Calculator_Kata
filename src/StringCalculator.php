@@ -5,7 +5,8 @@ class StringCalculator
 {
     public function add(string $inputtedString):string
     {
-        $arrayedString = explode(",",$inputtedString);
+        $separatorToComma = str_replace("\n",",",$inputtedString);
+        $arrayedString = explode(",",$separatorToComma);
         $sumResult = array_sum($arrayedString);
         return "$sumResult";
     }
