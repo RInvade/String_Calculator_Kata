@@ -67,4 +67,16 @@ final class StringCalculatorTest extends TestCase
 
         $this->assertEquals("Number expected but ',' found at position 6.",$returnedString);
     }
+
+    /**
+     * @test
+     */
+    public function given_separator_at_the_end_returns_error(){
+
+        $stringObject = new StringCalculator();
+
+        $returnedString = $stringObject->add("1,3,");
+
+        $this->assertEquals("Number expected but EOF found.",$returnedString);
+    }
 }
